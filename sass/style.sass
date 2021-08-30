@@ -1,0 +1,2514 @@
+@import '_variables'
+@import '_mixins'
+
+*,*:after,*:before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    font-family: 'Open Sans', sans-serif
+
+.container
+    max-width: 1110px
+    width: 100%
+    margin: 0 auto
+
+//header
+.header
+    background-image: url(../img/header/bg.jpg)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    width: 100%
+    height: 1007px  
+
+.nav
+    transition: .3s
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 49px
+    
+//logo*****************************
+.logo
+    display: flex
+    margin-right: 116px
+    &-text
+        transition: .2s 
+        font-size: 24px
+        font-family: 'Poppins', sans-serif
+        font-weight: 700
+        line-height: 2.39
+        text-decoration: none
+        text-transform: uppercase
+        padding-left: 17px
+        letter-spacing: 4.4px
+        text-align: left
+        color: #192b59      
+    &-img
+        transition: .2s 
+        padding-top: 3px
+        width: 50px
+        height: 49px
+   
+//*********************************
+.nav__menu
+    list-style: none
+    display: flex
+
+.nav__link
+    transition: .3s
+    border-radius: 50px
+    padding: 21px
+    text-decoration: none
+    text-transform: uppercase
+    font-size: 12px
+    font-weight: 600
+    font-stretch: normal
+    letter-spacing: 2px
+    text-align: right
+    color: #6e7ea9
+    &:hover
+        background-color: #edf6ff
+    
+.button
+    transition: .3s
+    width: 190px
+    height: 60px
+    padding: 27px 48px 26px
+    border-radius: 30px
+    background-color: $siteColor
+    text-transform: uppercase
+    text-decoration: none
+    font-size: 12px
+    font-weight: 700
+    line-height: .5
+    letter-spacing: 1.7px
+    text-align: center
+    color: #ffffff
+    &:hover
+        background-color: #cbdbe8
+        color: #7e8bae
+
+.burger-btn
+    display: none
+        
+//get-started
+.get-started
+    display: flex
+    margin-bottom: 96px
+    &__text
+        transition: .2s 
+        margin-top: 298px
+        width: 510px
+        height: 172px
+        font-size: 80px
+        font-weight: 600
+        line-height: 1.13
+        letter-spacing: -2.9px
+        text-align: left
+        color: #192b59  
+    &__btn
+        display: flex
+        margin-top: 55px
+    &__now
+        transition: .3s
+        margin-right: 20px
+        text-transform: uppercase
+        text-decoration: none
+        width: 230px
+        height: 60px
+        padding: 22px 40px 23px 42px
+        border-radius: 30px
+        background-color: $siteColor
+        font-size: 12px
+        font-weight: 700
+        line-height: 1.5
+        letter-spacing: 2.4px
+        text-align: center
+        color: #ffffff
+        &:hover
+            background-color: #cbdbe8
+            color: #7e8bae
+    &__lern
+        transition: .3s
+        text-transform: uppercase
+        text-decoration: none
+        width: 183px
+        height: 60px
+        padding: 22px 30px 25px 34px
+        border-radius: 30px
+        background-color: $siteColor
+        font-size: 12px
+        font-weight: 700
+        line-height: 1.5
+        letter-spacing: 2.5px
+        text-align: center
+        color: #ffffff
+        &:hover
+            background-color: #cbdbe8
+            color: #7e8bae
+                
+//sponsors
+.sponsors
+    background-color: #1085e4
+    background-image: url(../img/sponsors/bg.png)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    width: 100%
+    height: 274px
+    &__wrapper
+        padding-top: 99px
+        display: flex
+    &__slider
+        min-width: 0
+        display: none
+    &__link
+        transition: all .3s
+        display: block
+        margin-right: 104px
+        height: 69px
+        img
+            width: 100%
+        &:hover
+            filter: invert(1)
+        &:first-child
+            margin-top: 12px
+        &:nth-child(3)
+            margin-right: 102px
+            margin-top: 16px
+        &:last-child
+            margin-right: 0
+            margin-top: 6px
+  
+//features
+.features
+    height: 1143px
+    padding-top: 117px
+    margin-bottom: 94px
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: 181px 181px 181px 181px 181px
+    grid-column-gap: 30px
+    grid-row-gap: 30px
+    &__text-title
+        text-transform: uppercase
+        font-size: 14px
+        font-weight: 700
+        line-height: 1.5
+        letter-spacing: 2.8px
+        text-align: left
+        color: $siteColor  
+    &__text-sub
+        width: 80%
+        margin-top: 18px
+        font-size: 40px
+        font-weight: 600
+        line-height: 1.15
+        letter-spacing: -.8px
+        text-align: left
+        color: #192b59
+    &__card
+        transition: box-shadow .5s
+        display: block
+        text-decoration: none
+        height: 393px
+        box-shadow: 0px 4px 3px 0px #c5c5c552
+        &:hover
+            box-shadow: 0px 4px 9px 6px #c5c5c5
+        &-img
+            display: block
+            width: 70px
+            height: 70px
+            &.one
+                margin: 32px auto 44px auto
+                width: 55px
+            &.two
+                margin: 33px auto 44px auto
+            &.three
+                margin: 62px auto 44px auto
+                width: 55px
+            &.four
+                margin: 63px auto 44px auto
+            &.five
+                margin: 63px auto 44px auto
+            &.six
+                margin: 63px auto 44px auto
+        &-title
+            width: 99%
+            height: 21px
+            font-size: 20px
+            font-weight: 600
+            line-height: .5
+            letter-spacing: -0.6px
+            text-align: center
+            color: #192b59
+        &-text
+            width: 81%
+            height: 102px
+            margin: 15px auto 0px auto
+            font-size: 15px
+            font-weight: 600
+            line-height: 1.735
+            letter-spacing: .2px
+            text-align: center
+            color: #7581a1
+        &-link
+            width: 100%
+            height: 12px
+            font-size: 14px
+            font-weight: 600
+            line-height: 1
+            text-align: center
+            color: #1085e4
+    &__down
+        width: 96%
+        margin-left: 21px
+        margin-top: 19px
+        &-text
+            width: 100%
+            font-size: 16px
+            line-height: 1.63
+            margin-bottom: 10px
+            text-align: left
+            color: #7581a1
+        &-author
+            padding-left: 5px
+            font-size: 16px
+            font-weight: 700
+            color: #192b59
+            text-align: left
+            a
+                transition: text-decoration .5s
+                text-decoration: none
+                font-size: 14px
+                font-weight: 300
+                letter-spacing: .1px
+                line-height: 1.86
+                color: #1085e4
+                &:hover
+                    text-decoration: underline    
+
+//cardssssssssssssssssssssssssssssssssssssssssssss
+.features__up
+    grid-row-start: 1
+    grid-row-end: 1
+    grid-column-start: 1
+    grid-column-end: 1
+.features__card-1
+    grid-row-start: 2
+    grid-row-end: 3
+    grid-column-start: 1
+    grid-column-end: 1
+.features__card-2
+    grid-row-start: 4
+    grid-row-end: 5
+    grid-column-start: 1
+    grid-column-end: 1
+.features__card-3
+    grid-row-start: 1
+    grid-row-end: 2
+    grid-column-start: 2
+    grid-column-end: 2
+.features__card-4
+    grid-row-start: 1
+    grid-row-end: 2
+    grid-column-start: 3
+    grid-column-end: 3
+.features__card-5
+    grid-row-start: 3
+    grid-row-end: 4
+    grid-column-start: 2
+    grid-column-end: 2
+.features__card-6
+    grid-row-start: 3
+    grid-row-end: 4
+    grid-column-start: 3
+    grid-column-end: 3
+.features__down
+    grid-row-start: 5
+    grid-row-end: 5
+    grid-column-start: 2
+    grid-column-end: 4
+//features//
+
+//subscribe
+.subscribe
+    background-image: linear-gradient(120.0deg, #0a2090 22%, #2377cd 77%)
+    background-repeat: no-repeat
+    background-size: cover
+    width: 100%
+    height: 521px
+    &__content
+        display: flex
+        justify-content: space-between
+    &__wrapper
+        width: 540px
+        margin-top: 110px
+    &__text-up
+        text-transform: uppercase
+        margin-bottom: 23px
+        width: 19%
+        font-size: 14px
+        font-weight: 700
+        line-height: 1.86
+        letter-spacing: 2.8px
+        text-align: left
+        color: #00bffe
+    &__text-mid
+        margin-bottom: 33px
+        width: 80%
+        font-size: 50px
+        font-weight: 400
+        line-height: 0.92
+        letter-spacing: -0.9px
+        text-align: left
+        color: #fff
+    &__text-down
+        margin-bottom: 38px
+        width: 75%
+        font-size: 18px
+        line-height: 1.56
+        letter-spacing: normal
+        text-align: left
+        color: #dfe8ff
+    &__form
+        display: flex
+        position: relative
+    &__input
+        width: 540px
+        height: 70px
+        padding: 10px 205px 10px 41px
+        border-radius: 35px
+        border: solid 2px rgba(255, 255, 255, 0.2)
+        background-color: rgba(18,34,75,0.0)
+        color: #ffffff
+        &:focus
+            outline: none
+    &__btn
+        transition: color,background-color .3s
+        position: absolute
+        text-transform: uppercase
+        top: 9px
+        left: 340px
+        background-color: $siteColor
+        border-radius: 25px
+        text-decoration: none
+        width: 190px
+        height: 50px
+        padding: 11px 35px 19px 41px
+        font-size: 14px
+        font-weight: 700
+        line-height: 2
+        letter-spacing: 2.8px
+        text-align: center
+        color: #ffffff
+        &:hover
+            background-color: #cbdbe8
+            color: #7e8bae
+    &__img
+        width: 100%
+        margin-top: 49px
+
+//software
+.software
+    background-image: url(../img/software/bg.jpg)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    width: 100%
+    height: 1003px
+    &__content
+        padding-left: 13.1%
+        padding-top: 119px
+        width: 602px
+    &__btn
+        transition: color,background-color .3s
+        width: 60px
+        height: 60px
+        padding: 26px 16px 11px 14px
+        border-radius: 6px
+        box-shadow: 0px 8px 16px 0 rgba(16, 133, 228, 0.4)
+        background-color: $siteColor
+        &:hover
+            background-color: #cbdbe8
+            color: #7e8bae
+    &__btn-img
+        margin-top: 25px
+        width: 30px
+        height: 30px
+    &__title
+        width: 547px
+        margin-top: 41px
+        font-size: 50px
+        font-weight: 600
+        line-height: 1.2
+        letter-spacing: -1.08px
+        text-align: left
+        color: #192b59
+    &__text
+        margin-bottom: 38px
+        width: 600px
+        height: 95px
+        margin-top: 27px
+        font-size: 16px
+        line-height: 1.65
+        text-align: left
+        color: #7581a1
+    &__scroll
+        width: 606px
+        height: 314px
+        overflow-y: auto
+        overflow-x: hidden
+        &::-webkit-scrollbar
+            background-color: #f3f6ff
+            width: 4px
+        &::-webkit-scrollbar-track
+            margin-top: 7px
+            margin-bottom: 18px
+        &::-webkit-scrollbar-thumb
+            margin-top: 2px
+            width: 4px
+            background-color: #1085e4
+            border-radius: 5px
+    &__scroll-title
+        margin-bottom: 20px
+        width: 175px
+        height: 17px
+        font-size: 16px
+        font-weight: 700
+        line-height: 1.63
+        text-align: left
+        color: #5a6789
+    &__scroll-text
+        margin-bottom: 60px
+        width: 590px
+        height: 87px
+        font-size: 14px
+        line-height: 1.73
+        text-align: left
+        color: #7581a1
+
+//facts
+.facts
+    background: #edf6ff
+    background-image: url(../img/facts/bg.jpg)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    width: 100%
+    height: 532px
+    &__text-up
+        padding-top: 120px
+        padding-left: 32px
+        margin: 0 auto
+        text-transform: uppercase
+        width: 155px
+        height: 13px
+        font-size: 16px
+        font-weight: 700
+        line-height: .75
+        letter-spacing: 3.2px
+        color: #1085e4
+    &__text-down
+        margin: 0 auto
+        margin-top: 30px
+        padding-left: 20px
+        width: 452px
+        height: 111px
+        font-size: 50px
+        font-weight: 600
+        line-height: 1.2
+        letter-spacing: -1.79px
+        text-align: center
+        color: #192b59
+    &__wrapper
+        display: flex
+        justify-content: center
+        margin-top: 77px
+        margin-left: 17.33%
+    &__item
+        margin-right: 184px
+        width: 102px
+        height: 77px
+        &-num
+            font-weight: 700
+            line-height: .7
+            text-align: center
+            font-size: 60px
+            letter-spacing: -1.8px
+            color: #bacbdc
+        &-text
+            text-transform: uppercase
+            margin-left: 4px
+            margin-top: 13px
+            font-size: 12px
+            font-weight: 700
+            line-height: 2.5
+            letter-spacing: 2.4px
+            text-align: center
+            color: #1085e4
+
+//landingpage
+.landingpage
+    background-image: url(../img/landingpage/bg2.jpg)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    width: 100%
+    height: 622px
+    &__content
+        padding-top: 30px
+        display: flex
+        @media (max-width: 1458px)
+            padding-left: 15px
+            padding-right: 15px
+    &__wrapper
+        &:first-of-type
+            padding-top: 83px
+            margin-right: 10%
+            @media (max-width: 1458px)
+                margin-right: 5%
+    &__up
+        width: 473px
+        height: 110px
+        font-size: 50px
+        font-weight: 600
+        line-height: 1.2
+        letter-spacing: -1.7px
+        text-align: left
+        color: #192b59
+    &__mid
+        margin-top: 45px
+        width: 600px
+        height: 95px
+        font-size: 16px
+        line-height: 1.63
+        text-align: left
+        color: #7581a1
+    &__down  
+        margin-top: 42px
+        margin-bottom: 32px
+        text-transform: uppercase
+        width: 175px
+        height: 13px
+        font-size: 16px
+        font-weight: 700
+        line-height: 1
+        letter-spacing: 3.2px
+        text-align: left
+        color: #c4d2dd
+    &__links
+        display: flex
+        a
+            transition: filter .3s
+        img
+            border-radius: 7px
+        a:first-child
+            display: block
+            margin-right: 29px
+        a:hover
+            filter: brightness(50%)
+    &__img-play
+        @media (max-width: 1458px)
+            width: 122%
+
+//suitable
+.suitable
+    background-image: url(../img/suitable/bg.jpg),linear-gradient(90deg,#ffffff 50%,#edf6ff 50%)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    width: 100%
+    height: 691px
+    &__content
+        padding-left: 252px
+        padding-top: 123px
+        width: 602px
+    &__btn
+        transition: color,background-color .3s
+        width: 60px
+        height: 60px
+        padding: 26px 16px 11px 14px
+        border-radius: 6px
+        box-shadow: 0px 8px 16px 0 rgba(16, 133, 228, 0.4)
+        background-color: $siteColor
+        &:hover
+            background-color: #cbdbe8
+            color: #7e8bae
+    &__btn-img
+        margin-top: 25px
+        width: 30px
+        height: 30px
+    &__title
+        width: 547px
+        margin-top: 41px
+        font-size: 50px
+        font-weight: 600
+        line-height: 1.2
+        letter-spacing: -1.7px
+        text-align: left
+        color: #192b59
+    &__text
+        margin-bottom: 61px
+        width: 600px
+        height: 95px
+        margin-top: 27px
+        font-size: 16px
+        line-height: 1.65
+        text-align: left
+        color: #7581a1
+    &__link
+        transition: color,background-color .3s
+        margin-right: 20px
+        text-transform: uppercase
+        text-decoration: none
+        width: 230px
+        height: 60px
+        padding: 22px 40px 23px 42px
+        border-radius: 30px
+        background-color: $siteColor
+        font-size: 12px
+        font-weight: 700
+        line-height: 1.5
+        letter-spacing: 2.4px
+        text-align: center
+        color: #ffffff
+        &:hover
+            background-color: #cbdbe8
+            color: #7e8bae
+    &__img
+        display: none
+
+//control
+.control
+    background-image: url(../img/control/bg.jpg)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    width: 100%
+    height: 691px  
+    &__content
+        padding-top: 123px
+        width: 1046px
+    &__btn
+        transition: color,background-color .3s
+        width: 60px
+        height: 60px
+        padding: 26px 16px 11px 14px
+        border-radius: 6px
+        box-shadow: 0px 8px 16px 0 rgba(16, 133, 228, 0.4)
+        background-color: $siteColor
+        &:hover
+            background-color: #cbdbe8
+            color: #7e8bae
+    &__btn-img
+        margin-top: 25px
+        width: 30px
+        height: 30px
+    &__title
+        width: 420px
+        margin-top: 41px
+        font-size: 50px
+        font-weight: 600
+        line-height: 1.2
+        letter-spacing: -1.7px
+        text-align: left
+        color: #192b59
+    &__text
+        margin-bottom: 61px
+        width: 600px
+        height: 95px
+        margin-top: 27px
+        font-size: 16px
+        line-height: 1.65
+        text-align: left
+        color: #7581a1
+    &__link
+        transition: color,background-color .3s
+        margin-right: 20px
+        text-transform: uppercase
+        text-decoration: none
+        width: 230px
+        height: 60px
+        padding: 22px 62px 23px 66px
+        border-radius: 30px
+        background-color: $siteColor
+        font-size: 12px
+        font-weight: 700
+        line-height: 1.5
+        letter-spacing: 2.4px
+        text-align: center
+        color: #ffffff
+        &:hover
+            background-color: #cbdbe8
+            color: #7e8bae
+    &__img
+        display: none
+//screenshot
+.screenshot
+    background: #edf6ff
+    width: 100%
+    &__title
+        padding-top: 116px
+        padding-bottom: 83px
+        &-up
+            text-transform: uppercase
+            width: 100%
+            height: 19px
+            font-size: 18px
+            font-weight: 700
+            line-height: 1
+            letter-spacing: 3.8px
+            text-align: center
+            color: #1085e4
+        &-down
+            margin-top: 24px
+            width: 100%
+            height: 35px
+            font-size: 40px
+            font-weight: 600
+            line-height: 1
+            letter-spacing: -1px
+            text-align: center
+            color: #192b59
+    &__img
+        max-width: 1295px
+        width: 100%
+        padding-right: 8px
+        display: block
+        margin: 0 auto
+
+//clients
+.clients
+    background-image: url(../img/clients/bg.jpg)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    width: 100%
+    height: 640px
+    &__content
+        padding-top: 196px
+    &__text-up
+        text-transform: uppercase
+        width: 100%
+        font-size: 18px
+        font-weight: 700
+        line-height: 1
+        letter-spacing: 3.8px
+        text-align: left
+        color: #85c8ff
+    &__text-down
+        margin-top: 25px
+        width: 100%
+        font-size: 40px
+        font-weight: 600
+        line-height: 1
+        letter-spacing: -1.3px
+        text-align: left
+        color: #ffffff
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        margin-top: 66px
+        div
+            margin-right: 2%
+            &:last-of-type
+                margin: 0
+    &__card
+        box-shadow: 0px 6px 26px 0px rgb(152 152 152 / 25%)
+        max-width: 350px
+        width: 33.33333%
+        border-radius: 10px
+        background-color: #fff
+        &-text
+            padding: 10% 0 8.5% 11.8%
+            width: 83%
+            font-size: 14px
+            line-height: 1.72
+            letter-spacing: normal
+            text-align: left
+            color: #8085b1
+        &-name
+            position: relative
+            padding-left: 31.3%
+            width: 100%
+            font-size: 22px
+            font-weight: 600
+            line-height: .9
+            letter-spacing: -0.66px
+            text-align: left
+            color: #000958
+            &::before
+                content: ''
+                position: absolute
+                border-radius: 50px
+                background-image: url(../img/clients/1.jpg)
+                background-position: center
+                background-size: cover
+                box-shadow: 0px 12px 0px 0px rgb(113 113 113 / 19%)
+                width: 50px
+                height: 50px
+                top: -4px
+                left: 11.9%
+        &-prof
+            display: block
+            padding-bottom: 10%
+            transition: text-decoration .3s
+            text-decoration: none
+            padding-left: 31.3%
+            text-transform: uppercase  
+            width: 100%
+            font-size: 14px
+            font-weight: 700
+            line-height: 2.2
+            letter-spacing: 2.8px
+            text-align: left
+            color: #1085e4
+            &:hover
+                text-decoration: underline
+    &__slider
+        display: none
+
+//plans
+.plans
+    background-position: center
+    background-repeat: no-repeat
+    width: 100%
+    height: 957px
+    &__content
+        padding-top: 45px
+    &__title-up
+        width: 100% 
+        height: 14px 
+        text-align: center
+        text-transform: uppercase
+        font-size: 18px
+        font-weight: 700
+        line-height: .9
+        letter-spacing: 3.9px
+        color: #1085e4
+    &__title-down
+        margin-top: 25px
+        width: 100%
+        height: 41px
+        font-size: 40px
+        font-weight: 600
+        line-height: 1.25
+        letter-spacing: -1.2px
+        text-align: center
+        color: #192b59
+    &__wrapper
+        margin-top: 88px
+        display: flex
+        justify-content: space-between
+    &__slider
+        display: none
+    &__card
+        transition: all .5s
+        width: 31.7%
+        height: 623px
+        background-color: #f5faff
+        cursor: pointer
+        &:hover .plans__card-btn
+            border: solid 2px rgba(0, 0, 0, 0.1)
+            background-color: #1a88e1
+            color: #fff
+        &:hover
+            background-color: #192b59
+            color: #fff
+        &:hover .plans__card-price
+            color: #fff
+        &:hover .plans__card-item
+            color: #fff
+        &:hover .plans__card-text
+            color: #fff
+        &:hover .plans__card-btn:hover
+            background-color: #cbdbe8
+            color: #7e8bae
+        &-price
+            transition: all .3s
+            margin-top: 68px
+            width: 100%
+            height: 91px
+            font-weight: 700
+            line-height: 1
+            text-align: center
+            font-size: 70px
+            letter-spacing: -2.1px
+            color: #000958
+            span
+                font-size: 20px
+                letter-spacing: -0.6px
+                color: #7b8ab2
+            span:first-child
+                color: inherit
+        &-text
+            transition: all .3s
+            text-transform: uppercase
+            width: 100%
+            height: 59px
+            font-size: 14px
+            font-weight: 700
+            line-height: .9
+            letter-spacing: 2.8px
+            text-align: center
+            color: #0084ff
+        &-list
+            margin-bottom: 40px
+        &-item
+            transition: all .3s
+            list-style: none
+            width: 100%
+            height: 40px
+            font-size: 14px
+            font-weight: 400
+            line-height: 1
+            text-align: center
+            color: #8085b1
+        &-btn
+            transition: all .3s
+            text-transform: uppercase
+            margin-left: 16.5%
+            text-decoration: none
+            height: 60px
+            padding: 5.3% 17.1% 6%
+            font-size: 12px
+            font-weight: 700
+            line-height: 2.5
+            letter-spacing: 2.4px
+            text-align: center
+            color: #8085b1
+            border: solid 2px rgba(0, 0, 0, 0.1)
+            border-radius: 30px
+            background-color: #f5faff
+        &-price3
+            padding-left: 15px
+            
+//team
+.team
+    background-image: url(../img/team/bg.jpg)
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    width: 100%
+    height: 845px
+    &__content
+        padding-top: 118px
+    &__title-up
+        text-transform: uppercase
+        width: 100%
+        height: 14px
+        font-size: 18px
+        font-weight: 800
+        line-height: 1
+        letter-spacing: 3.6px
+        text-align: center
+        color: #85c8ff
+    &__title-down
+        margin-top: 23px
+        width: 100%
+        height: 30px
+        font-size: 40px
+        font-weight: 600
+        line-height: 1.25
+        letter-spacing: -1.2px
+        text-align: center
+        color: #ffffff
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        margin-top: 157px
+    &__card
+        position: relative
+        width: 31.4%
+        background-color: #ffffff
+        &-img
+            position: absolute
+            object-fit: cover
+            width: 82%
+            top: -26%
+            left: 9%
+        &-prof
+            text-transform: uppercase
+            padding-top: 212px
+            width: 100%
+            height: 12px
+            font-size: 14px
+            font-weight: 800
+            line-height: 1
+            letter-spacing: 2.8px
+            text-align: center
+            color: #1a88e1
+        &-name
+            margin-top: 29px
+            width: 100%
+            height: 21px
+            font-size: 26px
+            font-weight: 600
+            line-height: 1
+            letter-spacing: -0.78px
+            text-align: center
+            color: #192b59
+        &-social
+            margin: 44px auto 8px
+            width: 229px
+    &__social-link
+        transition: background-color .4s
+        position: relative
+        width: 40px
+        height: 40px
+        margin-right: 11px
+        color: #9ea6b1
+        padding: 12px 18px
+        background-color: #fff
+        border-radius: 50px
+        &:nth-child(2)
+            padding: 12px 15px
+        &:nth-child(3)
+            padding: 12px 14px
+            margin-right: 9px
+        &:last-child
+            margin: 0
+            padding: 12px 16px
+        &:hover
+            color: #fff
+            background-color: #1a88e1
+    &__slider
+        display: none
+
+//trial
+.trial
+    background-color: #edf6ff
+    background-image: url(../img/trial/bg.jpg)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    width: 100%
+    height: 840px
+    &__content
+        padding-top: 111px
+        padding-left: 500px
+    &__title
+        margin-bottom: 58px
+        width: 80%
+        height: 110px
+        font-size: 50px
+        font-weight: 600
+        line-height: 1.2
+        letter-spacing: -1.5px
+        text-align: left
+        color: #192b59
+    &__form
+        position: relative
+    &-user
+        position: absolute
+        top: 28px
+        left: 76%
+        color: #8995b3
+    &-envelope
+        position: absolute
+        top: 119px
+        left: 75.5%
+        color: #8995b3
+    &-pen
+        position: absolute
+        top: 209px
+        left: 75.4%
+        color: #8995b3
+    &__input-name
+        position: relative
+        max-width: 525.5px
+        width: 85%
+        height: 70px
+        letter-spacing: .8px
+        margin: 0 0 20px
+        padding: 28px 40px 26px 41px
+        border-radius: 35px
+        border: solid 2px rgba(72, 72, 72, 0.1)
+        background-color: #ffffff
+        &:focus
+            outline: none
+    &__input-email
+        position: relative
+        max-width: 525.5px
+        width: 85%
+        height: 70px
+        letter-spacing: .7px
+        padding: 29px 40px 26px 41px
+        border-radius: 35px
+        border: solid 2px rgba(72, 72, 72, 0.1)
+        background-color: #ffffff
+        &:focus
+            outline: none
+    &__input-text
+        position: relative
+        max-width: 525.5px
+        width: 85%
+        height: 160px
+        letter-spacing: .65px
+        margin: 20px 0 41px
+        border-radius: 35px
+        border: solid 2px rgba(72, 72, 72, 0.1)
+        padding: 28px 40px 116px 41px
+        &:focus
+            outline: none
+    &__input-btn
+        transition: background-color,color, .4s
+        display: block
+        position: relative
+        text-transform: uppercase
+        text-decoration: none
+        width: 234px
+        height: 60px
+        font-size: 12px
+        line-height: 1
+        letter-spacing: 2.4px
+        text-align: center
+        color: #fff
+        padding: 24px 45px 22px 49px
+        object-fit: contain
+        border-radius: 30px
+        background-color: #1085e4
+        i
+            padding-right: 9px
+        &:hover
+            background-color: #cbdbe8
+            color: #7e8bae
+    
+//footer
+.main-footer
+    display: flex
+    justify-content: space-between
+    padding-top: 24px
+
+.footer
+    background-color: #192b59
+    width: 100%
+    height: 70px
+    &__text
+        width: 310px
+        height: 17px
+        font-size: 16px
+        line-height: 1.3
+        text-align: left
+        color: #b6bae0
+        a
+            transition: text-decoration .4s
+            text-decoration: none
+            text-transform: uppercase
+            color: #1085e4
+            &:hover
+                text-decoration: underline
+    &__social
+        width: 172px
+    &__social-link
+        transition: color .4s
+        margin-right: 21px
+        color: #fff
+        &:hover
+            color: #7e8bae
+        &:last-child
+            margin: 0
+
+
+@media (max-width: 1280px)
+    .nav
+        padding-left: 15px
+        padding-right: 15px
+    .logo
+        margin-right: 4.5%
+    //get-started
+    .get-started
+        padding-left: 15px
+        padding-right: 15px
+    //sponsors
+    .sponsors__wrapper
+        padding: 99px 15px 0 15px
+    //features
+    .features
+        padding-left: 15px
+        padding-right: 15px 
+        &__text-sub 
+            font-size: 38px
+    //subscribe
+    .subscribe
+        &__content
+            padding-left: 15px
+            padding-right: 15px
+        &__wrapper
+        &__text-up
+            font-size: 13px
+        &__text-mid
+            font-size: 48px
+        &__text-down
+            font-size: 17px
+        &__input
+            width: 520px
+        &__btn
+            left: 330px
+            width: 180px
+            font-size: 13px
+    //software
+    .software
+        &__content 
+            padding-left: 14.1%
+        &__title
+            width: 512px
+            font-size: 48px
+        &__text
+            width: 588px
+            font-size: 15px
+        &__scroll
+            width: 588px
+            &-title 
+                font-size: 15px
+            &-text
+                font-size: 13px
+    //landingpage
+    .landingpage
+        height: 580px
+        &__up
+            font-size: 48px
+        &__mid
+            width: 527px
+            font-size: 14px
+        &__down
+            font-size: 14px
+        &__img-play 
+            width: 100%
+        &__wrapper
+            &:first-of-type 
+                padding-top: 50px
+    //suitable
+    .suitable
+        &__content 
+            padding-left: 190px
+        &__title 
+            width: 480px
+            font-size: 48px
+        &__text 
+            width: 525px
+            font-size: 14px
+    //control
+    .control
+        &__content
+            width: 100%
+            padding-left: 15px
+            padding-right: 15px
+        &__title
+            width: 405px
+            font-size: 48px
+        &__text
+            width: 535px
+            font-size: 14px
+    //screenshot
+    .screenshot
+        &__img
+            padding: 0
+    //clients
+    .clients
+        &__content
+            padding-left: 15px
+            padding-right: 15px
+        &__text-up
+            font-size: 16px
+        &__text-down
+            font-size: 38px
+    //plans
+    .plans
+        &__title-up
+            font-size: 17px
+        &__title-down
+            font-size: 39px
+        &__content
+            padding-left: 15px
+            padding-right: 15px
+        &__card
+            &-price
+                font-size: 68px
+            &-text
+                font-size: 13px
+            &-item
+                font-size: 13px
+            &-btn
+                font-size: 11px
+                margin-left: 17.5%
+                padding: 4.3% 16.1% 5%
+    //team
+    .team
+        &__content
+            padding-left: 15px
+            padding-right: 15px
+    //trial
+    .trial
+        &__content
+            padding-right: 15px
+            padding-left: 500px
+        &__title
+            font-size: 48px
+            width: 91%
+        &__input-name
+            max-width: 490px
+        &__input-email
+            max-width: 490px
+        &__input-text 
+            max-width: 490px
+    //footer 
+    .main-footer 
+        padding-left: 15px
+        padding-right: 15px
+
+@media (max-width: 1024px)
+    .logo
+        margin-right: 0
+        &-img 
+            padding-top: 4px
+            width: 40px
+            height: 42px
+    .nav__link 
+        padding: 12px
+        font-size: 11px    
+    .button
+        width: 140px
+        font-size: 10px
+        padding: 22px 26px 20px
+        height: 50px
+    //get-started
+    .get-started
+        &__text
+            font-size: 65px
+            width: 400px
+            height: 150px
+        &__btn
+            margin-top: 30px
+        &__now
+            width: 190px
+            font-size: 11px
+            padding: 22px 6px 23px 8px
+        &__lern
+            width: 143px
+            font-size: 11px
+            padding: 22px 15px 25px 14px
+    //sponsors
+    .sponsors
+        &__wrapper
+            justify-content: space-between
+        &__link
+            text-align: center
+            &:nth-child(n)
+                margin-right: 0
+            img
+                width: 80%
+    //features
+    .features
+        height: 1104px
+        grid-column-gap: 20px
+        grid-row-gap: 20px
+        &__text-sub 
+            font-size: 30px
+        &__down-text
+            font-size: 13px
+        &__card
+            height: 363px
+            &-text
+                font-size: 12px
+            &-link
+                font-size: 13px
+            &-img
+                width: 65px
+                height: 65px
+                &.one
+                    width: 50px
+                &.three
+                    width: 50px
+    //subscribe
+    .subscribe
+        height: 430px
+        &__content
+        &__wrapper
+            width: 430px
+        &__text-up
+            font-size: 10px
+        &__text-mid
+            font-size: 44px
+        &__text-down
+            font-size: 14px
+        &__input
+            width: 410px
+            height: 55px
+        &__btn
+            left: 272px
+            width: 129px
+            font-size: 11px
+            padding: 9px 35px 19px 25px
+            top: 7px
+            height: 40px
+        &__wrapper-img
+            max-width: 300px
+    //software
+    .software
+        &__content 
+            width: 512px
+            padding-left: 15.1%
+        &__title
+            width: 512px
+            font-size: 45px
+        &__text
+            width: 512px
+            font-size: 13px
+        &__scroll
+            width: 512px
+            &-title 
+                font-size: 13px
+            &-text
+                font-size: 13px
+                width: 512px
+    //facts
+    .facts
+        &__text-up
+            font-size: 14px
+        &__text-down
+            font-size: 48px
+        &__wrapper
+            margin-left: 0
+            margin-top: 60px
+        &__item 
+            margin: 0 auto
+            &-num
+                font-size: 58px
+    //landingpage
+    .landingpage
+        height: 500px
+        &__content
+            justify-content: space-between
+        &__wrapper:first-of-type
+            padding-top: 40px
+            margin-right: 0
+        &__up
+            width: 405px
+            font-size: 42px
+        &__mid
+            width: 405px
+            font-size: 12px
+            margin-top: 25px
+        &__down
+            font-size: 12px
+            margin-top: 25px
+            margin-bottom: 25px
+        &__img-play
+            max-width: 420px
+        &__links
+            img
+                width: 70%
+            a:first-child
+                margin: 0
+    //suitable
+    .suitable
+        &__title 
+            width: 415px
+            font-size: 42px
+        &__text 
+            margin-top: 22px
+            margin-bottom: 40px
+            width: 415px
+            font-size: 12px
+        &__link
+            padding: 18px 22px 18px 22px
+            font-size: 11px
+    //control
+    .control
+        &__title 
+            width: 350px
+            font-size: 42px
+        &__text
+            font-size: 12px
+            width: 465px
+    //clients
+    .clients
+        height: 550px
+        &__content
+            padding-top: 160px
+        &__text-up
+            font-size: 15px
+        &__text-down
+            font-size: 36px
+        &__card
+            &-text
+                padding: 7% 0 7.5% 11.8%
+                font-size: 12px
+            &-name
+                font-size: 20px
+                &::before
+                    width: 35px
+                    height: 35px
+                    top: 0
+                    box-shadow: 0px 6px 0px 0px rgb(113 113 113 / 19%)
+            &-prof
+                font-size: 12px
+                padding-bottom: 8%
+    //plans
+    .plans
+        &__title-up 
+            font-size: 16px
+        &__title-down
+            font-size: 38px
+        &__card
+            width: 30.7%
+            &-price 
+                font-size: 67px
+            &-text 
+                font-size: 12px
+            &-item 
+                font-size: 12px
+            &-btn 
+                font-size: 11px
+                margin-left: 18.5%
+                padding: 4.3% 14.1% 5%
+                @media (max-width: 985px)
+                    margin-left: 16.5%
+                @media (max-width: 901px)
+                    margin-left: 15.5%
+                @media (max-width: 839px)
+                    margin-left: 14.5%
+                @media (max-width: 817px)
+                    margin-left: 13.5%
+    //team
+    .team
+        height: 830px
+        &__card
+            &-prof
+                padding-top: 65%
+                font-size: 13px
+            &-name
+                font-size: 25px
+            &-social
+                width: 183px
+                margin: 35px auto 8px
+        &__social-link
+            margin-right: 0
+            padding: 10px 16px
+            &:nth-child(2)
+                padding: 10px 13px
+            &:nth-child(3)
+                padding: 10px 12px
+                margin-right: 0
+            &:last-child
+                margin: 0
+                padding: 10px 14px
+    //trial
+    .trial
+        &__content
+            padding-left: 40%
+        &__title
+            font-size: 46px
+            width: 100%
+
+@media (max-width: 800px)
+    .body__lock
+        overflow: hidden
+    .header
+        height: 800px
+    //nav
+    .nav 
+        padding: 0 15px
+        position: fixed
+        width: 100%
+        top: 0
+        left: 0
+        z-index: 3
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background-color: #1085e4
+            z-index: 3
+            box-shadow: 0px 1px 14px 1px #35353547
+        &__link
+            transition: border-radius 0s
+            font-size: 14px
+            display: block
+            text-align: left
+            padding: 8px 2px 8px 2px
+            color: #fff
+            z-index: 1
+            &:hover
+                border-radius: 0
+                border-bottom: 1px solid #fff
+                background-color: #1085e4
+        &__menu
+            transition: all .3s
+            overflow: auto
+            position: fixed
+            display: block
+            top: -100%
+            left: 0
+            width: 100%
+            height: 100%
+            background-color: #024c8a
+            color: #7e8bae
+            padding: 60px 20% 5px 12px
+            z-index: 1
+            &_active
+                top: 0
+                z-index: 1
+    //logo
+    .logo-img 
+        padding-top: 5px
+        width: 25px
+        height: 30px
+        z-index: 3
+    .logo-text 
+        font-size: 20px
+        padding-left: 10px
+        z-index: 3
+    //burger
+    .burger-btn
+        transition: all .2s
+        display: block
+        z-index: 10
+        position: relative
+        width: 30px
+        height: 20px
+        span
+            transition: all .2s
+            position: absolute
+            width: 100%
+            top: 9px
+            left: 0
+            height: 2px
+            background-color: #fff
+        &::before
+            transition: all .2s
+            content: ''
+            position: absolute
+            width: 100%
+            height: 2px
+            background-color: #fff
+            top: 0
+        &::after
+            transition: all .2s
+            content: ''
+            position: absolute
+            width: 100%
+            height: 2px
+            background-color: #fff
+            bottom: 0
+            left: 0
+        &_active
+            span
+                height: 0
+            &::before
+                transform: rotate(45deg)
+                top: 9px
+            &::after
+                transform: rotate(-45deg)
+                bottom: 9px
+    .button
+        display: none
+    //get-started
+    .get-started
+        padding-top: 109px
+        &__text 
+            font-size: 49px
+            margin-top: 160px
+        &__btn
+            margin: 0
+            flex-direction: column
+        &__now
+            padding: 15px 20px 15px 20px
+            height: auto
+            margin-bottom: 15px    
+        &__lern
+            padding: 15px 20px 15px 20px
+            height: auto
+    //sponsors
+    .sponsors
+        height: 200px
+        &__wrapper
+            display: none
+        &__slider
+            display: flex
+            min-width: 0
+            padding-top: 72px
+        &__link
+            img
+                width: 130px
+            &:first-child
+                margin-top: 9px 
+            &:nth-child(3)
+                margin-top: 9px
+    //features
+    .features
+        padding-top: 59px
+        height: 1405px
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: 97px 162px 162px 162px 162px 162px 162px 137px
+        margin-bottom: 59px
+        &__card 
+            height: 340px
+    //features-grid
+    .features__up
+        grid-row: 1 / 1
+        grid-column: 1 / 3
+    .features__card-1
+        grid-row: 2 / 3
+        grid-column: 1 / 1
+    .features__card-2
+        grid-row: 2 / 3
+        grid-column: 2 / 2
+    .features__card-3
+        grid-row: 4 / 5
+        grid-column: 1 / 2
+    .features__card-4
+        grid-row: 4 / 5
+        grid-column: 2 / 2
+    .features__card-5
+        grid-row: 6 / 7
+        grid-column: 1 / 2
+    .features__card-6
+        grid-row: 6 / 7
+        grid-column: 2 / 2
+    .features__down
+        grid-row: 8 / 8
+        grid-column: 1 / 3
+    //subscribe
+    .subscribe
+        height: auto
+        &__content
+            padding-top: 30px
+            padding-bottom: 85px
+            align-items: center
+            flex-direction: column-reverse
+        &__wrapper
+            width: 400px
+            margin-top: 0
+        &__text-up
+            font-size: 12px
+            margin-bottom: 15px
+            width: 100%
+            text-align: center
+        &__text-mid
+            font-size: 30px
+            margin-bottom: 20px
+            width: 100%
+            text-align: center
+        &__text-down
+            font-size: 12px
+            margin-bottom: 30px
+            width: 100%
+            text-align: center
+        &__input
+            width: 100%
+            padding: 10px 37px 10px 35px
+            text-align: center
+        &__btn
+            left: 136.5px
+            top: 70px
+        &__img
+            display: none
+    //software
+    .software
+        padding-left: 20px
+        padding-right: 20px
+        background-image: url(../img/software/bg2.jpg)
+        height: auto
+        &__content
+            max-width: 512px
+            width: 100%
+            padding-left: 0
+            padding-top: 80px
+            padding-bottom: 80px
+        &__title 
+            font-size: 35px
+            width: 100%
+        &__text 
+            width: 100%
+        &__scroll
+            width: 100%
+            &-text
+                width: 100%
+        &__btn
+            width: 20px
+            height: 20px
+            padding: 15px 13px 8px 13px
+            img
+                height: 20px
+                width: 20px
+    //facts
+    .facts
+        height: 410px
+        &__text-up
+            padding-top: 60px
+            font-size: 12px
+        &__text-down
+            width: 300px
+            font-size: 38px
+            padding-left: 0
+        &__wrapper
+            flex-wrap: wrap
+            margin-top: 25px
+        &__item 
+            margin: 0 11%
+            &-num
+                font-size: 48px
+            &-text
+                margin-top: 5px
+                font-size: 12px
+    //landingpage
+    .landingpage
+        height: auto
+        &__content
+            flex-direction: column
+            align-items: center
+            &:first-of-type
+                padding-top: 20px
+                width: 100%
+        &__up
+            font-size: 40px
+            width: 100%
+            height: auto
+            text-align: center
+        &__mid
+            height: auto
+            text-align: center
+            max-width: 650px
+            width: 100%
+            font-size: 14px
+        &__down
+            margin-top: 10px
+            margin-bottom: 20px
+            text-align: center
+            width: 100%
+        &__links
+            justify-content: center
+            a 
+                width: 112px
+                &:last-of-type
+                    margin-left: 3%
+            img
+                width: 100%
+                &:first-of-type
+                    height: 39px
+    //suitable
+    .suitable
+        background-image: url(../img/suitable/bg2.jpg)
+        background-position: center
+        background-size: cover
+        background-repeat: no-repeat
+        height: auto
+        &__content 
+            padding-left: 15px
+            padding-right: 15px
+            padding-top: 35px
+            padding-bottom: 5px
+            max-width: 580px
+            width: 100%
+        &__btn
+            width: 20px
+            height: 20px
+            padding: 15px 13px 8px 13px
+            &-img
+                width: 20px
+                height: 20px
+        &__title 
+            width: 100%
+            font-size: 40px
+            margin-top: 42px
+            text-align: center
+        &__text
+            height: auto
+            line-height: 1.5
+            margin-bottom: 35px
+            width: 100%
+            font-size: 14px
+            text-align: center
+        &__link 
+            display: block
+            margin: 0 auto
+            height: 40px
+            padding: 11px 20px 15px 20px
+            font-size: 12px
+        &__img
+            max-width: 450px
+            width: 100%
+            margin: 30px auto
+            display: block
+    //control
+    .control
+        background-image: url(../img/control/bg2.jpg)
+        background-position: center
+        background-size: cover
+        background-repeat: no-repeat
+        height: auto
+        &__content 
+            padding-top: 35px
+            padding-bottom: 5px
+            padding-right: 15px
+            max-width: 580px
+            width: 100%
+        &__btn
+            width: 20px
+            height: 20px
+            padding: 15px 13px 8px 13px
+            &-img
+                width: 20px
+                height: 20px
+        &__title 
+            width: 100%
+            font-size: 40px 
+            margin-top: 42px 
+            text-align: center
+        &__text
+            height: auto
+            line-height: 1.5
+            margin-bottom: 35px
+            width: 100%
+            font-size: 14px
+            text-align: center
+        &__link 
+            display: block
+            margin: 0 auto
+            height: 40px
+            padding: 11px 20px 15px 20px
+            font-size: 12px
+        &__img
+            max-width: 420px
+            width: 100%
+            display: block
+            margin: 30px auto
+    //screenshot
+    .screenshot
+        &__title
+            padding-top: 35px
+            padding-bottom: 40px
+            &-up
+                font-size: 14px
+            &-down
+                margin-top: 14px
+                font-size: 40px
+    //clients
+    .clients
+        min-height: 400px
+        height: auto
+        &__content 
+            padding-top: 140px
+        &__text-up 
+            font-size: 14px
+        &__text-down
+            font-size: 32px
+            margin-top: 15px
+        &__wrapper
+            display: none
+        &__card
+            width: 100%
+            margin: 60px auto
+            &-text
+                width: 90%
+                padding: 7% 0 7.5% 8.8%
+            &-name
+                padding-left: 28.3%
+                &::before
+                    left: 8.9%
+            &-prof
+                padding-left: 28.3%
+        &__slider
+            display: flex
+            justify-content: space-between
+    //plans
+    .plans
+        height: auto
+        &__wrapper
+            display: none
+        &__card
+            margin-top: 30px
+            width: 100%
+            margin-bottom: 30px
+            &-btn
+                margin: 0 auto
+                display: block
+                height: auto
+                width: 185px
+                padding: 1% 1% 1% 1%
+        &__slider
+            display: flex
+    //team
+    .team
+        height: auto
+        &__content 
+            padding-top: 80px
+        &__card
+            min-width: 0
+            background-color: transparent
+            &-social 
+                margin: 35px auto 20px
+            &-img
+                width: 45%
+                top: 0
+                left: 28%
+            &-prof
+                padding-top: 45%
+        &__wrapper
+            display: none
+        &__slider
+            display: block
+            margin-top: 35px
+            min-width: 0
+    //slick
+    .slick
+        &-list
+            overflow: hidden
+        &-track
+            display: flex          
+    //trial
+    .trial
+        background-image: url(../img/trial/bg2.jpg)
+        height: 800px
+        &__title 
+            height: auto
+            text-align: center
+            font-size: 38px
+            width: 100%
+        &__content
+            width: 80%
+            padding-top: 75px
+            padding-left: 15px
+            padding-right: 15px
+        &__input-name
+            max-width: none
+            width: 100%
+        &__input-email
+            max-width: none
+            width: 100%
+        &__input-text
+            max-width: none
+            width: 100%
+        &-user
+            left: 90%
+        &-envelope
+            left: 90.5%
+        &-pen 
+            left: 90.5%
+    //footer
+    .footer
+        height: auto
+        &__text 
+            margin-bottom: 30px
+        &__social 
+            margin-left: 15px
+            margin-bottom: 30px
+    .main-footer
+        flex-wrap: wrap
+        justify-content: center
+
+@media (max-width: 480px)
+    .header 
+        height: 430px
+    .get-started
+        &__text
+            margin-top: 65px
+            font-size: 40px
+            width: 300px
+            height: 90px
+            @media (max-width: 430px)
+                font-size: 35px
+            @media (max-width: 360px)
+                font-size: 34px
+            @media (max-width: 340px)
+                font-size: 32px
+        &__btn
+            margin-top: 20px
+            @media (max-width: 430px)
+                margin-top: 5px
+            @media (max-width: 340px)
+                margin-top: 0 
+        &__now 
+            width: 175px
+            height: 40px
+            font-size: 12px
+            margin-bottom: 10px
+            padding: 10px 8px 13px 8px
+        &__lern
+            width: 130px
+            height: 40px
+            font-size: 12px
+            padding: 11px 6px 13px 8px
+    //sponsors
+    .sponsors
+        height: 130px
+        &__link
+            &:nth-child(3)
+                margin-top: -10px
+        &__wrapper 
+            padding: 50px 15px 0 15px
+        &__slider
+            padding-top: 42px        
+    //features
+    .features
+        padding-top: 35px
+        height: auto
+        grid-template-columns: 1fr
+        grid-template-rows: 55px 250px 250px 250px 250px 250px 250px 220px 
+        margin-bottom: 0
+        &__text-title
+            font-size: 12px
+        &__text-sub
+            font-size: 20px
+        &__card
+            height: 250px
+            &-img
+                width: 55px
+                height: 55px
+                &.one
+                    margin: 22px auto 34px auto
+                    width: 40px
+                &.two
+                    margin: 23px auto 34px auto
+                &.three
+                    margin: 22px auto 34px auto
+                    width: 40px
+                &.four
+                    margin: 23px auto 34px auto
+                &.five
+                    margin: 23px auto 34px auto
+                &.six
+                    margin: 23px auto 34px auto
+            &-title
+                font-size: 14px
+            &-text
+                font-size: 12px
+                height: 70px
+            &-link
+                font-size: 12px
+        &__down-text 
+            width: 100%
+            font-size: 12px
+            text-align: left
+        &__down-author 
+            font-size: 12px
+            a
+                font-size: 12px
+        &__up
+            grid-row-start: 1
+            grid-row-end: 1
+            grid-column-start: 1
+            grid-column-end: 1
+        &__card-1
+            grid-row-start: 2
+            grid-row-end: 2
+            grid-column-start: 1
+            grid-column-end: 1
+        &__card-2
+            grid-row-start: 3
+            grid-row-end: 3
+            grid-column-start: 1
+            grid-column-end: 1
+        &__card-3
+            grid-row-start: 4
+            grid-row-end: 4
+            grid-column-start: 1
+            grid-column-end: 1
+        &__card-4
+            grid-row-start: 5
+            grid-row-end: 5
+            grid-column-start: 1
+            grid-column-end: 1
+        &__card-5
+            grid-row-start: 6
+            grid-row-end: 6
+            grid-column-start: 1
+            grid-column-end: 1
+        &__card-6
+            grid-row-start: 7
+            grid-row-end: 7
+            grid-column-start: 1
+            grid-column-end: 1
+        &__down
+            grid-row-start: 8
+            grid-row-end: 8
+            grid-column-start: 1
+            grid-column-end: 1
+            margin-left: 0
+            margin-bottom: 30px
+            width: 100%
+    //subscribe
+    .subscribe
+        &__wrapper
+            width: 90%
+        &__btn
+            font-size: 12px
+            left: 0
+            width: 100%
+            padding: 6px 35px 19px 29px
+            height: 35px
+        &__input 
+            height: 45px
+    //software
+    .software
+        padding-left: 15px
+        padding-right: 15px
+        &__content
+            padding-top: 50px
+            padding-bottom: 50px
+        &__title 
+            margin-top: 20px
+            font-size: 30px
+        &__text 
+            font-size: 12px
+        &__scroll
+            height: 325px
+            &-text
+                font-size: 12px
+        &__btn 
+            width: 15px
+            height: 15px
+            padding: 8px 9px 4px 9px
+            img
+                width: 15px
+                height: 15px  
+    //facts  
+    .facts
+        height: auto
+        &__text-up
+            padding-top: 45px
+        &__text-down
+            height: 95px
+            font-size: 34px
+            width: 280px
+        &__wrapper
+            margin-top: 15px
+            padding-bottom: 45px
+        &__item 
+            height: 70px
+            margin: 0 10%
+            &-num
+                font-size: 44px
+            &-text
+                margin-top: 5px
+    //landingpage
+    .landingpage
+        &__wrapper
+            &:first-of-type
+                padding-top: 0
+        &__up
+            font-size: 33px
+        &__mid
+            margin-top: 20px
+            font-size: 12px
+    //suitable
+    .suitable
+        &__content
+            padding-left: 15px
+            padding-top: 20px
+            max-width: 450px
+            width: 100%
+        &__btn
+            width: 15px
+            height: 15px
+            padding: 8px 9px 4px 9px
+            margin-left: 10px
+            &-img 
+                width: 15px
+                height: 15px
+        &__title 
+            width: 100%
+            font-size: 33px
+            margin-top: 15px
+            text-align: center
+            @media (max-width: 350px)
+                font-size: 30px
+        &__text
+            margin-top: 18px
+            margin-bottom: 27px
+            font-size: 12px
+            text-align: center
+        &__link 
+            margin: 0
+            display: block
+            width: 100%
+            height: 40px
+            padding: 11px 15px 10px 15px
+            font-size: 12px
+        &__img 
+            margin: 20px auto
+    //control
+    .control
+        &__content
+            max-width: 450px
+            padding-right: 15px
+            padding-left: 15px
+            padding-top: 20px
+        &__btn
+            width: 15px
+            height: 15px
+            padding: 8px 9px 4px 9px
+            &-img 
+                width: 15px
+                height: 15px
+        &__title 
+            font-size: 33px
+            margin-top: 15px
+        &__text
+            margin-top: 18px
+            margin-bottom: 27px
+            font-size: 12px
+        &__link 
+            margin: 0
+            display: block
+            width: 100%
+            height: 40px
+            padding: 11px 15px 10px 15px
+            font-size: 12px
+        &__img 
+            margin: 20px auto
+    //screenshot
+    .screenshot
+        &__title
+            padding-top: 20px
+            padding-bottom: 20px
+            &-up
+                font-size: 12px
+            &-down
+                height: 33px
+                margin-top: 0px
+                font-size: 33px
+                @media (max-width: 360px)
+                    font-size: 29px
+    //clients
+    .clients
+        &__card
+            margin: 35px auto
+    //plans
+    .plans
+        &__content 
+            padding-top: 35px
+        &__title-up
+            font-size: 14px
+        &.plans__title-down
+            font-size: 34px
+            margin-top: 15px
+        &__wrapper 
+            margin-top: 40px
+        &__card
+            margin-top: 20px
+            margin-bottom: 20px
+            height: 570px
+            &-list 
+                margin-bottom: 30px
+            &-price
+                margin-top: 55px
+                font-size: 64px
+            &-text
+                font-size: 12px
+            &-item 
+                font-size: 12px
+            &-btn
+                width: 140px
+    //team
+    .team
+        &__title-up
+            font-size: 14px
+        &__title-down
+            font-size: 38px
+        &__card
+            &-img
+                width: 45%
+                left: 28%
+            &-prof
+                padding-top: 45%
+                font-size: 12px
+            &-name
+                font-size: 23px
+    //trial
+    .trial
+        height: 680px
+        &__content 
+            width: 95%
+        &__title
+            font-size: 32px
+            margin-bottom: 40px
+        &__input-name
+            height: 40px
+        &__input-email
+            height: 40px
+        &__input-text
+            height: 100px
+            padding-bottom: 100px
+            margin-bottom: 30px
+        &__input-btn
+            width: 100%
+            height: 45px
+            padding: 17px 21px 10px 19px
+        &-user
+            top: 22px
+        &-envelope
+            top: 99px
+        &-pen
+            top: 180px
+    //footer
+    .footer
+        &__text 
+            width: 271px
+            font-size: 14px
+        &__social 
+            @media (max-width: 470px)
+                margin-left: 0
+
+@media (max-width: 320px)
+    //sponsors
+    .sponsors__link
+        &:first-child 
+            margin-top: 4px
+    //subscribe
+    .subscribe
+        &__content
+            padding-top: 20px
+            padding-bottom: 80px
+    //software
+    .software
+    //facts
+    .facts
+        &__text-up
+            padding-top: 20px
+        &__text-down
+            height: 90px
+        &__wrapper
+            margin-top: 8px
+            padding-bottom: 20px
+    //suitable
+    .suitable
+        &__btn
+            margin-left: 0
+    //clients
+    .clients
+        &__text-up
+            padding-left: 15px
+            padding-right: 15px
+        &__text-down
+            padding-left: 15px
+            padding-right: 15px
+        &__content
+            padding-right: 0
+            padding-left: 0
+        &__card
+            width: 90vw
+        
+    //team
+    .team
+        &__card-social
+            margin: 25px auto 20px
+        &__card-prof
+            padding-top: 50%
+        &__content
+            padding-top: 55px
+        &__title-up 
+            font-size: 11px
+        &__title-down 
+            font-size: 30px
+        &__slider 
+            margin-top: 30px
